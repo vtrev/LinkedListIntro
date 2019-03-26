@@ -66,7 +66,11 @@ This is the basic building blocks of creating your own List Data Structure.
 
 ## Try it
 
-Run the JUnit tests in this project.
+Run the JUnit tests in this project using maven.
+
+```
+mvn test
+```
 
 Fix all the failing tests in:
 
