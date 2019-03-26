@@ -74,8 +74,8 @@ mvn test
 
 Fix all the failing tests in:
 
-* BasicLinkedListNodeTest
-* BasicLinkedListTest
+* `BasicLinkedListNodeTest`
+* `BasicLinkedListTest`
 
 To learn more about Linked Lists.
 
