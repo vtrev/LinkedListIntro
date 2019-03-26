@@ -21,6 +21,14 @@ public class BasicLinkedListNodeTest {
         Node<String> lastNode = apple;
 
         // write code here to find the last Node
+        while (lastNode.getNext().getValue() != null){
+            lastNode.setNext(lastNode.getNext());
+            lastNode = lastNode.getNext();
+
+            if(lastNode.getNext() == null){
+               break;
+            }
+        }
 
         assertEquals("Orange", lastNode.getValue());
     }
@@ -34,7 +42,6 @@ public class BasicLinkedListNodeTest {
         Node<Integer> number4 = new Node<Integer>(29);
         Node<Integer> number5 = new Node<Integer>(36);
 
-
         number1.setNext(number2);
         number2.setNext(number3);
         number3.setNext(number4);
@@ -44,7 +51,17 @@ public class BasicLinkedListNodeTest {
         int total = 0;
 
         // sum all the value which is a multiple of 2 into total
+        while (true){
+            if(currentNode.getValue()%2 == 0){
+                total += currentNode.getValue();
+            }
 
+            if (currentNode.getNext() == null){
+                break;
+            }
+            currentNode = currentNode.getNext();
+
+        }
         assertEquals(40, total);
     }
 
@@ -57,7 +74,6 @@ public class BasicLinkedListNodeTest {
         Node<Integer> number4 = new Node<Integer>(29);
         Node<Integer> number5 = new Node<Integer>(36);
 
-
         number1.setNext(number2);
         number2.setNext(number3);
         number3.setNext(number4);
@@ -67,7 +83,14 @@ public class BasicLinkedListNodeTest {
         int total = 0;
 
         // sum each nodes value into total
+        while (true){
+                total += currentNode.getValue();
 
+            if (currentNode.getNext() == null){
+                break;
+            }
+            currentNode = currentNode.getNext();
+        }
         assertEquals(89, total);
     }
 

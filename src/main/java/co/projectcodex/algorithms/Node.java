@@ -19,6 +19,7 @@ public class Node<T> {
     }
 
     public void setNext(Node<T> next) {
+//        System.out.println("Setting next node "+next.getValue());
         this.next = next;
     }
 
